@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #5c6bc0;
+            padding-top: 30px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #5c6bc0;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"],
+        input[type="color"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #5c6bc0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3f51b5;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .gender-group,
+        .stream-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .gender-group label,
+        .stream-group label {
+            font-weight: normal;
+            margin-left: 5px;
+        }
+
+        .gender-group input,
+        .stream-group input {
+            margin-left: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .form-footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Username</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password">
+        </div>
+
+        <div class="form-group gender-group">
+            <label for="gender">Gender</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender">
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fl">Select file</label>
+            <input type="file" id="fl" name="file">
+        </div>
+
+        <div class="form-group">
+            <label for="cn">Favorite Color</label>
+            <input type="color" id="cn" name="color">
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age">
+        </div>
+
+        <div class="form-group">
+            <label for="adr">Address</label>
+            <textarea id="adr" rows="5" placeholder="Enter your address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="tym">Time</label>
+            <input type="time" id="tym" name="tym">
+        </div>
+
+        <div class="form-group stream-group">
+            <p>Choose Stream:</p>
+            <div>
+                <input type="checkbox" id="arts">
+                <label for="arts">Arts</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sci">
+                <label for="sci">Science</label>
+            </div>
+            <div>
+                <input type="checkbox" id="com">
+                <label for="com">Commerce</label>
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
